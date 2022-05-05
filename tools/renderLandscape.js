@@ -54,7 +54,7 @@ async function main() {
         pageInfo;
       const { width, height } = sizes[url];
       const page = await browser.newPage();
-      page.setDefaultNavigationTimeout(120 * 1000);
+      page.setDefaultNavigationTimeout(120 * 1000 * 10);
       await page.setViewport({ width, height, deviceScaleFactor });
 
       const baseUrl = [appUrl, "fullscreen", basePath]
