@@ -34,7 +34,7 @@ async function checkViaPuppeteer(remainingAttempts = 3) {
   const browser = await puppeteer.launch({args: ['--no-sandbox', '--disable-setuid-sandbox', '--ignore-certificate-errors']});
 
   const page = await browser.newPage();
-  page.setDefaultNavigationTimeout(120 * 1000);
+  page.setDefaultNavigationTimeout(120 * 1000 * 10);
   let result = null;
   try {
     await page.goto(url);
